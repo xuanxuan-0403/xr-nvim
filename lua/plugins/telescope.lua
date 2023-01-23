@@ -1,16 +1,8 @@
--- import telescope plugin safely
-local telescope_setup, telescope = pcall(require, "telescope")
-if not telescope_setup then
-  return
-end
+local builtin = require('telescope.builtin')
 
--- import telescope actions safely
-local actions_setup, actions = pcall(require, "telescope.actions")
-if not actions_setup then
-  return
-end
+-- 进入telescope页面会是插入模式，回到正常模式就可以用j和k来移动了
 
--- configure telescope
-telescope.setup({})
-
-telescope.load_extension("fzf")
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})  -- 环境里要安装ripgrep
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})

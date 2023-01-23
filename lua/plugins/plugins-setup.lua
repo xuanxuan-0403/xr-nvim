@@ -63,6 +63,8 @@ return require('packer').startup(function(use)
   use "numToStr/Comment.nvim" -- gcc 和 gc 注释
   use "windwp/nvim-autopairs" -- 自动补全括号
 
+  use "akinsho/bufferline.nvim" -- buffer分隔线
+
   if packer_bootstrap then
     require('packer').sync()
   end

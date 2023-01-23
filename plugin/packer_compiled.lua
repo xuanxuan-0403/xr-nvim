@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\Lenovo\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["bufferline.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\Lenovo\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\bufferline.nvim",
+    url = "https://github.com/akinsho/bufferline.nvim"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "C:\\Users\\Lenovo\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp",
