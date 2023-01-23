@@ -35,5 +35,5 @@ opt.termguicolors = true
 opt.signcolumn = "yes"
 
 -- 主题
-vim.cmd[[colorscheme tokyonight-night]]
+vim.cmd[[colorscheme tokyonight-moon]]
 -- vim.cmd[[colorscheme nord]]

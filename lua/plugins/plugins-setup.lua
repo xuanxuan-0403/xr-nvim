@@ -23,6 +23,8 @@ vim.cmd([[
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
+  use("nvim-lua/plenary.nvim")
+
   use 'folke/tokyonight.nvim' -- 主题
   use 'shaunsingh/nord.nvim'
   use {
@@ -39,6 +41,27 @@ return require('packer').startup(function(use)
   use "nvim-treesitter/nvim-treesitter" -- 语法高亮
   use "p00f/nvim-ts-rainbow" -- 括号区分
 
+  use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",  -- 这个相当于mason.nvim和lspconfig的桥梁
+    "neovim/nvim-lspconfig"
+  }
+    -- 自动补全
+  use "hrsh7th/nvim-cmp"
+  use "hrsh7th/cmp-nvim-lsp"
+  use "L3MON4D3/LuaSnip" -- snippets引擎，不装这个自动补全会出问题
+  use "saadparwaiz1/cmp_luasnip"
+  use "rafamadriz/friendly-snippets"
+  use "hrsh7th/cmp-path" -- 文件路径
+
+    -- 一个快速查找文件的plugins <space>ff
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.1',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
+
+  use "numToStr/Comment.nvim" -- gcc 和 gc 注释
+  use "windwp/nvim-autopairs" -- 自动补全括号
 
   if packer_bootstrap then
     require('packer').sync()
