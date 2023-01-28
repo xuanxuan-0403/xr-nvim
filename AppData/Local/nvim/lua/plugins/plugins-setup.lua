@@ -1,5 +1,4 @@
 -- 自动安装 packer
-
 local ensure_packer = function()
     local fn = vim.fn
     local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
@@ -24,6 +23,12 @@ vim.cmd([[
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     use("nvim-lua/plenary.nvim")
+
+    -- javascrip 语法支持
+    use 'pangloss/vim-javascript'
+    use 'jelera/vim-javascript-syntax'
+    use 'othree/javascript-libraries-syntax.vim'
+    use 'leafgarland/typescript-vim'
 
     use 'folke/tokyonight.nvim' -- 主题
     use 'shaunsingh/nord.nvim'
@@ -91,6 +96,15 @@ return require('packer').startup(function(use)
 
     -- 主题配色
     use 'w0ng/vim-hybrid'
+
+    -- cursorword 插件可以给当前光标下的单词增加下划线
+    use 'itchyny/vim-cursorword'
+
+    -- 可以使用不同颜色同时高亮多个单词 <space>k <space>K
+    use 'lfv89/vim-interestingwords'
+
+    -- 代码格式化
+    use 'vim-autoformat/vim-autoformat'
 
     if packer_bootstrap then
         require('packer').sync()

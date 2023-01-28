@@ -122,6 +122,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\Lenovo\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\indentLine",
     url = "https://github.com/Yggdroot/indentLine"
   },
+  ["javascript-libraries-syntax.vim"] = {
+    loaded = true,
+    path = "C:\\Users\\Lenovo\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\javascript-libraries-syntax.vim",
+    url = "https://github.com/othree/javascript-libraries-syntax.vim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "C:\\Users\\Lenovo\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lualine.nvim",
@@ -202,6 +207,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\Lenovo\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
   },
+  ["typescript-vim"] = {
+    loaded = true,
+    path = "C:\\Users\\Lenovo\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\typescript-vim",
+    url = "https://github.com/leafgarland/typescript-vim"
+  },
   ["vim-airline"] = {
     loaded = true,
     path = "C:\\Users\\Lenovo\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-airline",
@@ -212,6 +222,16 @@ _G.packer_plugins = {
     path = "C:\\Users\\Lenovo\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-airline-themes",
     url = "https://github.com/vim-airline/vim-airline-themes"
   },
+  ["vim-autoformat"] = {
+    loaded = true,
+    path = "C:\\Users\\Lenovo\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-autoformat",
+    url = "https://github.com/vim-autoformat/vim-autoformat"
+  },
+  ["vim-cursorword"] = {
+    loaded = true,
+    path = "C:\\Users\\Lenovo\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-cursorword",
+    url = "https://github.com/itchyny/vim-cursorword"
+  },
   ["vim-floaterm"] = {
     loaded = true,
     path = "C:\\Users\\Lenovo\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-floaterm",
@@ -221,6 +241,21 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\Lenovo\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-hybrid",
     url = "https://github.com/w0ng/vim-hybrid"
+  },
+  ["vim-interestingwords"] = {
+    loaded = true,
+    path = "C:\\Users\\Lenovo\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-interestingwords",
+    url = "https://github.com/lfv89/vim-interestingwords"
+  },
+  ["vim-javascript"] = {
+    loaded = true,
+    path = "C:\\Users\\Lenovo\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-javascript",
+    url = "https://github.com/pangloss/vim-javascript"
+  },
+  ["vim-javascript-syntax"] = {
+    loaded = true,
+    path = "C:\\Users\\Lenovo\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-javascript-syntax",
+    url = "https://github.com/jelera/vim-javascript-syntax"
   },
   ["vim-tmux-navigator"] = {
     loaded = true,

@@ -13,3 +13,4 @@ require("plugins/bufferline")
 require("plugins/telescope")
 -- require("plugins/dashboard")
 require("plugins/toggleterm")
+
