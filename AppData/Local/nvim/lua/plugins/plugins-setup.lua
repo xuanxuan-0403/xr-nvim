@@ -66,8 +66,31 @@ return require('packer').startup(function(use)
     use "akinsho/bufferline.nvim" -- buffer分隔线
 
     -- dashboard: 一个neovim的开屏插件
-    use {'glepnir/dashboard-nvim'}
+    use {
+      'glepnir/dashboard-nvim',
+      event = 'VimEnter',
+      config = function()
+        require('dashboard').setup {
+          -- config
+        }
+      end,
+      requires = {'nvim-tree/nvim-web-devicons'}
+    }
     use 'nvim-tree/nvim-web-devicons'
+
+    -- 终端
+    use {"akinsho/toggleterm.nvim", tag = 'v2.*'}
+    use 'voldikss/vim-floaterm'
+
+    -- 状态栏美化
+    use 'vim-airline/vim-airline'
+    use 'vim-airline/vim-airline-themes'
+
+    -- 代码缩进线
+    use 'Yggdroot/indentLine'
+
+    -- 主题配色
+    use 'w0ng/vim-hybrid'
 
     if packer_bootstrap then
         require('packer').sync()

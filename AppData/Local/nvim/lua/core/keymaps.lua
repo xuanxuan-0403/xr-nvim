@@ -28,3 +28,6 @@ keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current c
 
 keymap.set("n", "gt", ":bnext<CR>")
 keymap.set("n", "gT", ":bprevious<CR>")
+
+
+keymap.set("n", "<leader>t", ":ToggleTerm<CR>")

@@ -11,5 +11,5 @@ require("plugins/comment")
 require("plugins/autopairs")
 require("plugins/bufferline")
 require("plugins/telescope")
-require("plugins/dashboard")
-
+-- require("plugins/dashboard")
+require("plugins/toggleterm")
