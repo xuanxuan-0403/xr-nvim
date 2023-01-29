@@ -25,10 +25,17 @@ return require('packer').startup(function(use)
     use("nvim-lua/plenary.nvim")
 
     -- javascrip 语法支持
-    use 'pangloss/vim-javascript'
+    -- use 'pangloss/vim-javascript'
     use 'jelera/vim-javascript-syntax'
     use 'othree/javascript-libraries-syntax.vim'
     use 'leafgarland/typescript-vim'
+    -- use 'mxw/vim-jsx'
+    use 'sheerun/vim-polyglot'
+    use 'dense-analysis/ale' -- Eslint
+    -- 它为 Vim 带来了几个类似 IDE 的特性，并且很容易设置。它建立在语言服务器的概念之上，在现代编辑器中，语言服务器具有自动完成、转到定义、悬浮工具提示等功能。
+    use 'neoclide/coc.nvim' 
+    use 'weirongxu/coc-explorer'
+    use 'neoclide/coc-tsserver'
 
     use 'folke/tokyonight.nvim' -- 主题
     use 'shaunsingh/nord.nvim'
@@ -71,17 +78,19 @@ return require('packer').startup(function(use)
     use "akinsho/bufferline.nvim" -- buffer分隔线
 
     -- dashboard: 一个neovim的开屏插件
-    use {
-      'glepnir/dashboard-nvim',
-      event = 'VimEnter',
-      config = function()
-        require('dashboard').setup {
-          -- config
-        }
-      end,
-      requires = {'nvim-tree/nvim-web-devicons'}
-    }
+    -- use {
+    --   'glepnir/dashboard-nvim',
+    --   event = 'VimEnter',
+    --   config = function()
+    --     require('dashboard').setup {
+    --       -- config
+    --     }
+    --   end,
+    --   requires = {'nvim-tree/nvim-web-devicons'}
+    -- }
     use 'nvim-tree/nvim-web-devicons'
+    -- 开屏插件
+    use 'mhinz/vim-startify'
 
     -- 终端
     use {"akinsho/toggleterm.nvim", tag = 'v2.*'}
