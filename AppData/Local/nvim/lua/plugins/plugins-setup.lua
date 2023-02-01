@@ -24,18 +24,21 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     use("nvim-lua/plenary.nvim")
 
+    -- 中文help doc
+    use { 'yianwillis/vimcdoc', event = 'VimEnter' }
+
     -- javascrip 语法支持
     -- use 'pangloss/vim-javascript'
     use 'jelera/vim-javascript-syntax'
     use 'othree/javascript-libraries-syntax.vim'
     use 'leafgarland/typescript-vim'
+
     -- use 'mxw/vim-jsx'
     use 'sheerun/vim-polyglot'
     use 'dense-analysis/ale' -- Eslint
+
     -- 它为 Vim 带来了几个类似 IDE 的特性，并且很容易设置。它建立在语言服务器的概念之上，在现代编辑器中，语言服务器具有自动完成、转到定义、悬浮工具提示等功能。
-    use 'neoclide/coc.nvim' 
-    use 'weirongxu/coc-explorer'
-    use 'neoclide/coc-tsserver'
+    use { 'neoclide/coc.nvim', branch = 'release' }
 
     use 'folke/tokyonight.nvim' -- 主题
     use 'shaunsingh/nord.nvim'
@@ -105,6 +108,9 @@ return require('packer').startup(function(use)
 
     -- 主题配色
     use 'w0ng/vim-hybrid'
+
+    -- 透明背景
+    use 'xiyaowong/nvim-transparent'
 
     -- cursorword 插件可以给当前光标下的单词增加下划线
     use 'itchyny/vim-cursorword'
