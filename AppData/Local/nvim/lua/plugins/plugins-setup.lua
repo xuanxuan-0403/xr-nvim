@@ -28,10 +28,11 @@ return require('packer').startup(function(use)
     use { 'yianwillis/vimcdoc', event = 'VimEnter' }
 
     -- javascrip 语法支持
-    -- use 'pangloss/vim-javascript'
+    use 'pangloss/vim-javascript'
     use 'jelera/vim-javascript-syntax'
     use 'othree/javascript-libraries-syntax.vim'
     use 'leafgarland/typescript-vim'
+    use 'joukevandermaas/vim-ember-hbs'
 
     -- use 'mxw/vim-jsx'
     use 'sheerun/vim-polyglot'
@@ -40,7 +41,10 @@ return require('packer').startup(function(use)
     -- 它为 Vim 带来了几个类似 IDE 的特性，并且很容易设置。它建立在语言服务器的概念之上，在现代编辑器中，语言服务器具有自动完成、转到定义、悬浮工具提示等功能。
     use { 'neoclide/coc.nvim', branch = 'release' }
 
-    use 'folke/tokyonight.nvim' -- 主题
+    -- 主题
+    use 'folke/tokyonight.nvim' 
+    use 'JoosepAlviste/palenightfall.nvim'
+
     use 'shaunsingh/nord.nvim'
     use {
         'nvim-lualine/lualine.nvim', -- 状态栏
@@ -69,6 +73,20 @@ return require('packer').startup(function(use)
     use "rafamadriz/friendly-snippets"
     use "hrsh7th/cmp-path" -- 文件路径
 
+    -- lsp自动补全
+    use 'prabirshrestha/vim-lsp'
+    use 'mattn/vim-lsp-settings'
+
+    -- 增强lsp
+    use({
+        "glepnir/lspsaga.nvim",
+        branch = "main",
+        config = function()
+            require("lspsaga").setup({})
+        end,
+        requires = { {"nvim-tree/nvim-web-devicons"} }
+    })
+
     -- 一个快速查找文件的plugins <space>ff
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
@@ -94,14 +112,20 @@ return require('packer').startup(function(use)
     use 'nvim-tree/nvim-web-devicons'
     -- 开屏插件
     use 'mhinz/vim-startify'
+    -- 代码折叠
+    use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
 
     -- 终端
     use {"akinsho/toggleterm.nvim", tag = 'v2.*'}
     use 'voldikss/vim-floaterm'
 
     -- 状态栏美化
-    use 'vim-airline/vim-airline'
-    use 'vim-airline/vim-airline-themes'
+    -- use 'vim-airline/vim-airline'
+    -- use 'vim-airline/vim-airline-themes'
+    use {
+      'nvim-lualine/lualine.nvim',
+      requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
 
     -- 代码缩进线
     use 'Yggdroot/indentLine'

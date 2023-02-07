@@ -63,5 +63,6 @@
     },
     "git.enableGutters": true,
     "volar.takeOverMode.enabled": true,
-    "Lua.telemetry.enable": true
+    "Lua.telemetry.enable": true,
+    "coc.preferences.formatOnSaveFiletypes": ["css", "markdown"],
 }
