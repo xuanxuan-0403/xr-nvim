@@ -320,6 +320,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\Lenovo\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-startify",
     url = "https://github.com/mhinz/vim-startify"
   },
+  ["vim-surround"] = {
+    loaded = true,
+    path = "C:\\Users\\Lenovo\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-surround",
+    url = "https://github.com/tpope/vim-surround"
+  },
   ["vim-tmux-navigator"] = {
     loaded = true,
     path = "C:\\Users\\Lenovo\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-tmux-navigator",

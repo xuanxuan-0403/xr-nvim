@@ -58,14 +58,34 @@
 
 # 其他常用键
 
+> (主要是怕自己忘了)
+
 1. `11j/11k` : 跳转到相对行数 11 行
 2. 下面有一段代码，需要快速将光标跳转到这一行的第 2 个 `s` 上
-   -   可以 `fs;`
-
+    - 可以 `fs;`
 
 ```javascript
 const name = 'start';
 ```
 
 3. `leap.nvim` 快捷移动
-   * `<s>`(启动键) + `<n>`(需要查找的按键) + `<d>` 定位键
+
+    - `<s>`(启动键) + `<n>`(需要查找的按键) + `<d>` 定位键
+
+4. `surround.vim` 快速修改包裹符号
+
+    - `"hello" -> 'hello'`: `cs"'`
+    - `test -> "test"`: `ysiw"`
+    - `"test" -> test`: `ds"`
+
+    ***
+
+    - `test -> ( test )`: `ysiw(`
+    - `test -> (test)`: `ysiw)`
+    - `test -> <p>test</p>`: `ysiw<p>`
+    - `整行 -> { 整行 }`: `yss{`
+
+    ***
+
+    - `<p class="title">test<p> -> test`: `dst`
+        - `dst` : t = tag

@@ -32,6 +32,9 @@ return require('packer').startup(function(use)
     -- 移动增强
     use 'ggandor/leap.nvim'
 
+    -- 快速修改这个单词的容器符号
+    use 'tpope/vim-surround'
+
     -- 中文help doc
     use { 'yianwillis/vimcdoc', event = 'VimEnter' }
 
