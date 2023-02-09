@@ -29,6 +29,9 @@ return require('packer').startup(function(use)
     use('jose-elias-alvarez/null-ls.nvim')
     use('MunifTanjim/prettier.nvim')
 
+    -- 移动增强
+    use 'ggandor/leap.nvim'
+
     -- 中文help doc
     use { 'yianwillis/vimcdoc', event = 'VimEnter' }
 
@@ -124,6 +127,9 @@ return require('packer').startup(function(use)
     use {"akinsho/toggleterm.nvim", tag = 'v2.*'}
     use 'voldikss/vim-floaterm'
 
+    -- 多光标移动
+    use {'mg979/vim-visual-multi', branch = 'master'}
+
     -- 状态栏美化
     -- use 'vim-airline/vim-airline'
     -- use 'vim-airline/vim-airline-themes'
@@ -149,6 +155,9 @@ return require('packer').startup(function(use)
 
     -- 代码格式化
     use 'vim-autoformat/vim-autoformat'
+
+    -- 一个可以让你休息的动画
+    use 'eandrju/cellular-automaton.nvim' 
 
     if packer_bootstrap then
         require('packer').sync()
