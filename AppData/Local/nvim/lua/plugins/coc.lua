@@ -1,10 +1,24 @@
--- Some servers have issues with backup files, see #649
-vim.opt.backup = false
-vim.opt.writebackup = false
+-- 统一管理coc插件
+vim.g.coc_global_extensions = {
+    'coc-html',
+    'coc-json',
+    'coc-tsserver',
+    'coc-git',
+    'coc-css',
+    'coc-vetur',
+    'coc-eslint',
+    'coc-highlight',
+    'coc-prettier',
+    'coc-tslint',
+    'coc-tslint-plugin',
+    'coc-stylelint',
+    'coc-emmet',
+    'coc-vimlsp',
+}
 
 -- Having longer updatetime (default is 4000 ms = 4s) leads to noticeable
 -- delays and poor user experience
-vim.opt.updatetime = 300
+vim.opt.updatetime = 100
 
 -- Always show the signcolumn, otherwise it would shift the text each time
 -- diagnostics appeared/became resolved
@@ -132,7 +146,7 @@ keyset("o", "ac", "<Plug>(coc-classobj-a)", opts)
 
 
 -- Remap <C-f> and <C-b> to scroll float windows/popups
----@diagnostic disable-next-line: redefined-local
+-- @diagnostic disable-next-line: redefined-local
 local opts = {silent = true, nowait = true, expr = true}
 keyset("n", "<C-f>", 'coc#float#has_scroll() ? coc#float#scroll(1) : "<C-f>"', opts)
 keyset("n", "<C-b>", 'coc#float#has_scroll() ? coc#float#scroll(0) : "<C-b>"', opts)

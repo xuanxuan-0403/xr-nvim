@@ -24,6 +24,11 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     use("nvim-lua/plenary.nvim")
 
+    -- prettier
+    use('neovim/nvim-lspconfig')
+    use('jose-elias-alvarez/null-ls.nvim')
+    use('MunifTanjim/prettier.nvim')
+
     -- 中文help doc
     use { 'yianwillis/vimcdoc', event = 'VimEnter' }
 
