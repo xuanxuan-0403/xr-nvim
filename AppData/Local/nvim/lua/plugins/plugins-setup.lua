@@ -39,11 +39,11 @@ return require('packer').startup(function(use)
     use { 'yianwillis/vimcdoc', event = 'VimEnter' }
 
     -- javascrip 语法支持
-    use 'pangloss/vim-javascript'
-    use 'jelera/vim-javascript-syntax'
-    use 'othree/javascript-libraries-syntax.vim'
-    use 'leafgarland/typescript-vim'
-    use 'joukevandermaas/vim-ember-hbs'
+    -- use 'pangloss/vim-javascript'
+    -- use 'jelera/vim-javascript-syntax'
+    -- use 'othree/javascript-libraries-syntax.vim'
+    -- use 'leafgarland/typescript-vim'
+    -- use 'joukevandermaas/vim-ember-hbs'
 
     -- use 'mxw/vim-jsx'
     use 'sheerun/vim-polyglot'
@@ -71,32 +71,33 @@ return require('packer').startup(function(use)
     use "nvim-treesitter/nvim-treesitter" -- 语法高亮
     use "p00f/nvim-ts-rainbow" -- 括号区分
 
-    use {
-        "williamboman/mason.nvim",
-        "williamboman/mason-lspconfig.nvim",  -- 这个相当于mason.nvim和lspconfig的桥梁
-        "neovim/nvim-lspconfig"
-    }
+    -- use {
+    --     "williamboman/mason.nvim",
+    --     "williamboman/mason-lspconfig.nvim",  -- 这个相当于mason.nvim和lspconfig的桥梁
+    --     "neovim/nvim-lspconfig"
+    -- }
+
     -- 自动补全
     use "hrsh7th/nvim-cmp"
-    use "hrsh7th/cmp-nvim-lsp"
+    -- use "hrsh7th/cmp-nvim-lsp"
     use "L3MON4D3/LuaSnip" -- snippets引擎，不装这个自动补全会出问题
-    use "saadparwaiz1/cmp_luasnip"
+    -- use "saadparwaiz1/cmp_luasnip"
     use "rafamadriz/friendly-snippets"
     use "hrsh7th/cmp-path" -- 文件路径
 
     -- lsp自动补全
-    use 'prabirshrestha/vim-lsp'
-    use 'mattn/vim-lsp-settings'
+    -- use 'prabirshrestha/vim-lsp'
+    -- use 'mattn/vim-lsp-settings'
 
     -- 增强lsp
-    use({
-        "glepnir/lspsaga.nvim",
-        branch = "main",
-        config = function()
-            require("lspsaga").setup({})
-        end,
-        requires = { {"nvim-tree/nvim-web-devicons"} }
-    })
+    -- use({
+    --     "glepnir/lspsaga.nvim",
+    --     branch = "main",
+    --     config = function()
+    --         require("lspsaga").setup({})
+    --     end,
+    --     requires = { {"nvim-tree/nvim-web-devicons"} }
+    -- })
 
     -- 一个快速查找文件的plugins <space>ff
     use {
@@ -110,16 +111,6 @@ return require('packer').startup(function(use)
     use "akinsho/bufferline.nvim" -- buffer分隔线
 
     -- dashboard: 一个neovim的开屏插件
-    -- use {
-    --   'glepnir/dashboard-nvim',
-    --   event = 'VimEnter',
-    --   config = function()
-    --     require('dashboard').setup {
-    --       -- config
-    --     }
-    --   end,
-    --   requires = {'nvim-tree/nvim-web-devicons'}
-    -- }
     use 'nvim-tree/nvim-web-devicons'
     -- 开屏插件
     use 'mhinz/vim-startify'
@@ -134,8 +125,6 @@ return require('packer').startup(function(use)
     use {'mg979/vim-visual-multi', branch = 'master'}
 
     -- 状态栏美化
-    -- use 'vim-airline/vim-airline'
-    -- use 'vim-airline/vim-airline-themes'
     use {
       'nvim-lualine/lualine.nvim',
       requires = { 'kyazdani42/nvim-web-devicons', opt = true }
@@ -160,7 +149,7 @@ return require('packer').startup(function(use)
     use 'vim-autoformat/vim-autoformat'
 
     -- 一个可以让你休息的动画
-    use 'eandrju/cellular-automaton.nvim' 
+    -- use 'eandrju/cellular-automaton.nvim' 
 
     if packer_bootstrap then
         require('packer').sync()

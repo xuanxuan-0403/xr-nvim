@@ -13,7 +13,7 @@ vim.g.coc_global_extensions = {
     'coc-tslint-plugin',
     'coc-stylelint',
     'coc-emmet',
-    'coc-vimlsp',
+    'coc-snippets'
 }
 
 -- Having longer updatetime (default is 4000 ms = 4s) leads to noticeable
